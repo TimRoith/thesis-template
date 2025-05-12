@@ -1,0 +1,138 @@
+\ProvidesPackage{styles/fau-symbols}[2018/07/12 Defines useful commands. 
+									 Author: \cfileauthor]
+\ProcessOptions\relax
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\RequirePackage{amsmath,amsthm,amssymb} 
+\RequirePackage{dsfont}
+\RequirePackage{nomencl}
+\RequirePackage{makeidx}
+\makeindex
+\makenomenclature
+\setlength{\nomlabelwidth}{1.5cm}
+% ########################################################################################
+% Specific values
+% ----------------------------------------------------------------------------------------
+\newcommand*{\dims}{d}
+% ########################################################################################
+% Operators
+% ----------------------------------------------------------------------------------------
+\newcommand*{\laplace}{\ensuremath{\Delta}}
+\nomenclature{\laplace}{The Laplace operator.}
+\newcommand*{\supp}{\mathrm{supp}}
+\newcommand*{\abs}[1]{\ensuremath{\left|#1\right|}}
+\newcommand*{\norm}[1]{\ensuremath{\left\|#1\right\|}}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+% ########################################################################################
+% Number sets
+% ----------------------------------------------------------------------------------------
+\newcommand*{\C}{\ensuremath{\mathds{C}}}
+\nomenclature{\C}{The set of complex numbers.}
+\newcommand*{\Csym}{\C_{\text{sym}}}
+\newcommand*{\N}{\ensuremath{\mathds{N}}}
+\nomenclature{\N}{The set of integers.}
+\newcommand*{\R}{\ensuremath{\mathds{R}}}
+\nomenclature{\R}{The set of real numbers.}
+\newcommand*{\Rd}{\R^{\dims}}
+
+
+% ###############################################################
+\newcommand{\domain}{\Omega}
+\newcommand{\revision}[1]{#1}
+\newcommand{\relpartial}{\partial^\text{rel}}
+\newcommand{\CF}{K}
+\newcommand{\conset}{\mathcal{O}}
+\newcommand{\constr}{\conset}
+\newcommand{\nlscale}{\tau}
+\renewcommand{\div}{\operatorname{div}}
+\newcommand{\img}{u}
+\newcommand{\imgg}{v}
+\newcommand{\Nem}{Nemytskii}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\pDir}{\mathcal{E}}
+\newcommand{\pDDir}{\vec E}
+\newcommand{\GE}{\vec{E}}
+\newcommand{\closure}[1]{\overline{#1}}
+\newcommand{\cl}[1]{\closure{#1}}
+\newcommand{\Whit}[1]{\overline{#1}}
+\newcommand{\McS}[1]{\underline{#1}}
+\newcommand{\partialext}{\partial^{\text{ext}}}
+\newcommand{\partialint}{\partial^{\text{int}}}
+\newcommand{\extcl}[1]{\overline{#1}^{\text{ext}}}
+\newcommand{\gscale}{\varepsilon}
+\newcommand{\gres}{\delta}
+\newcommand{\grad}{\nabla}
+\newcommand{\res}{\gres}
+\newcommand{\etaradius}{t}
+\newcommand*{\GConv}{\overset{\Gamma}{\longrightarrow}}
+
+\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\argmin}{argmin}
+
+\newcommand{\tset}{\mathcal{T}}
+\newcommand{\OutSpace}{\mathcal{Y}}
+
+\newcommand{\popLoss}{\mathcal{L}}
+
+\newcommand{\param}{\theta}
+\newcommand{\adv}{{\operatorname{adv}}}
+\newcommand{\oh}{{\operatorname{oh}}}
+\newcommand{\MAP}{{\operatorname{MAP}}}
+\newcommand{\pparam}{\overline\theta}
+\newcommand{\weight}{W}
+\newcommand{\bias}{b}
+\newcommand{\budget}{\varepsilon}
+\newcommand{\net}{f}     %{\mathcal{N}}
+\newcommand{\inp}{x}
+\newcommand{\inpp}{\bar{x}}
+\newcommand{\oup}{y}
+\newcommand{\oupp}{\bar{y}}
+\newcommand{\Inp}{\mathcal{X}}
+\newcommand{\Oup}{\mathcal{\OutSpace}}
+\newcommand{\Out}{\Oup}
+\newcommand{\Param}{\Theta}
+\newcommand{\noTr}{K}
+\newcommand{\trSet}{\mathcal{T}}
+\newcommand{\trSetY}{\mathcal{T}_\Oup}
+\newcommand{\loss}{\ell}
+\newcommand{\empBatchLoss}{L}
+\newcommand{\empLoss}{\mathcal{L}}
+\newcommand{\popRisk}{\mathcal{R}}
+\newcommand{\relu}{\operatorname{ReLU}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\Exp}[1]{\E\left[#1\right]}
+\newcommand{\Var}[1]{\mathrm{Var}\left[#1\right]}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\func}{J}
+\newcommand{\sg}{p}
+\newcommand{\regParam}{\alpha}
+\newcommand{\timeStep}{\tau}
+\newcommand{\tol}{\mathrm{tol}}
+\newcommand{\acc}{\mathcal{A}(\net_\param)}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\LinBreg}{\mbox{LinBreg}}
+\newcommand{\AdaBreg}{\mbox{AdaBreg}}
+\newcommand{\lip}{\operatorname{Lip}}
+\newcommand{\prox}[1]{\,\mathrm{prox}_{#1}}
+\renewcommand{\k}[1]{{(#1)}}
+\newcommand{\st}{\,:\,}
+\newcommand{\Lip}{\operatorname{Lip}}
+\DeclareMathOperator*{\sign}{sign}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator{\dom}{dom}
+\definecolor{sky}{rgb}{0.31, 0.69, 0.99}
+\definecolor{apple}{rgb}{0.33, 0.8, 0.14}
+\definecolor{grape}{rgb}{0.99, 0.35, 0.34}
+\definecolor{hpurp}{rgb}{0.87, 0., 1.}
+\definecolor{orong}{rgb}{1.0, 0.55, 0.0}
+\definecolor{ponk}{rgb}{1.0, 0.08, 0.58}
+\definecolor{flamingopink}{rgb}{0.99, 0.46, 0.47}
+\definecolor{teal}{rgb}{0.0, 0.5, 0.5}
+\definecolor{brinkpink}{rgb}{0.98, 0.38, 0.5}
+\definecolor{carnationpink}{rgb}{1.0, 0.65, 0.79}
+\newcommand{\nc}{\color{black}}
+
+
+
+

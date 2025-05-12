@@ -1,0 +1,53 @@
+\documentclass[fontsize=11pt, % size of the font
+			   paper=a4,
+			   chapterprefix=true,
+			   WordMark=atelier/logo/FAU-NatFak.pdf,
+			   ExtraLogo=atelier/logo/DepMathLogo.pdf,
+			   % oneside, % other option: oneside
+			   % chapterprefix=false, % specifies if the word chapter is printed for chapter headings
+			   % BCOR=0mm, % offset for binding
+			   setPDF, % sets twosided=semi, BCOR=0, 
+			   %DIV=calc, % if not specified
+			   % showframe, % show the page layout
+			   bibstyle=styleB,
+			   ]{fau-book}
+% #####################################################################
+\input{frontmatter/00_preamble.tex}
+
+%
+\RedeclareSectionCommand[
+tocnumwidth=2em
+]{chapter}
+\RedeclareSectionCommand[
+tocindent=2em,
+tocnumwidth=2.8em
+]{section}
+\RedeclareSectionCommand[
+tocindent=4.8em,
+tocnumwidth=4em
+]{subsection}
+\hypersetup{hypertexnames=false}
+
+
+
+\begin{document}
+%-------------------------------------------------
+\frontmatter
+%-------------------------------------------------
+\maketitle
+
+\tableofcontents
+\listoffigures
+%\printnomenclature
+%-------------------------------------------------
+
+
+%-------------------------------------------------
+\mainmatter
+%-------------------------------------------------
+\input{mainmatter/01_introduction.tex}
+\input{mainmatter/02_example.tex}
+
+\input{backmatter/thesis-printbib.tex}
+
+\end{document}

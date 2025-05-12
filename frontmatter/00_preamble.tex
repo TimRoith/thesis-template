@@ -1,0 +1,143 @@
+% ########################################################################################
+% Font encoding and font specification
+% ----------------------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% ########################################################################################
+% The following specifies the titlepage and can not be deleted
+% ----------------------------------------------------------------------------------------
+\title{Consistency, Robustness and Sparsity for Learning Algorithms}
+\subtitle{Konsistenz, Robustheit und Dünnbesetztheit von Lernalgorithmen}
+\author{Tim Roith}
+\thesistype{}
+\degree{Dr. rer. nat.}
+\degprog{Mathematik}% specify the degree program
+\Referee{first=Martin Burger}% Referees
+\Advisor{first=M.Sc. C}
+%\renewcommand{\supervisors}{Hello :)} % use this to specify the supervisor area yourself
+%\subdate{Today} % Use this if you want to specify the date on the titlepage
+% ########################################################################################
+\keywords{topicA, topicB, topicC} %keywords of your thesis
+\setpdfinfo % For additional information in the pdf file
+% ########################################################################################
+% Bibliography
+% ----------------------------------------------------------------------------------------
+\addbibresource{backmatter/thesis-bibliography.bib}
+% ########################################################################################
+% Load the fau style packages with customization
+% ----------------------------------------------------------------------------------------
+% Color themes
+\usepackage[NatClassic]{styles/fau-colors}
+
+% Appearence of boxes and page
+\usepackage[thmboxing=styleC,
+			boxingstyle=styleC,
+			chapterheader=styleC, 
+			footerheader=styleA,
+			%noabbrev % no abbreviations in cleveref
+			]{styles/fau-appearence}
+% Command spec for symbols
+\usepackage{styles/fau-symbols}
+% ########################################################################################
+% ########################################################################################
+% ########################################################################################
+% Custom commands and additional packages
+% Put additional command definition below.
+% Load additional packages below 
+% ----------------------------------------------------------------------------------------
+%
+\usepackage{kantlipsum}
+\usepackage[totoc]{idxlayout}
+\usepackage[final]{pdfpages}
+\usepackage{subcaption}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.multipart}
+\usepackage{wrapfig}
+
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+\vspace*{1cm}
+\huge \textbf{\@title} \\[5mm]
+\Large \@subtitle%
+%
+\vfill%
+%
+Der Naturwissenschaftlichen Fakultät\\
+der\\
+Friedrich-Alexander-Universität
+Erlangen-Nürnberg\\[1em]
+zur Erlangung des Doktorgrades\\
+\textbf{\@degree}
+\vfill
+
+vorgelegt von\\
+\textbf{\@author} \\
+aus\\
+\textbf{Amberg}
+\end{center}
+\end{titlepage}
+%
+%
+%
+\begin{titlepage}
+\thispagestyle{empty}%
+\vfill%
+%
+\begin{center}
+Als Dissertation genehmigt von der Naturwissenschaftlichen Fakultät der Friedrich-Alexander-Universität Erlangen-Nürnberg
+\end{center}
+%
+\vfill%
+%
+\begin{tabular}{r l}
+Tag der mündlichen Prüfung: & 20.03.2024\\
+%Promotionsausschuss der & \\
+%Naturwissenschaftlichen Fakultät, Vorsitz: & Prof. Dr. Svetlana Tsogoeva \\
+Gutachter*in: & Martin Burger\\
+              & Dejan Slep{\v{c}}ev\\
+              & Franca Hoffmann
+\end{tabular}%
+\vfill
+\end{titlepage}
+}
+\makeatother
+
+\newcommand\expprefix{}
+\let\latexorigthechapter\thechapter
+\renewcommand{\thechapter}{\expprefix\latexorigthechapter}
+
+
+\usepackage{todonotes}
+\usepackage{csquotes}
+
+%---------------
+% colors
+\definecolor{sky}{rgb}{0.51, 0.79, 0.99}
+\definecolor{apple}{rgb}{0.43, 0.8, 0.24}
+\definecolor{grape}{rgb}{0.99, 0.35, 0.34}
+\definecolor{orong}{rgb}{1.0, 0.55, 0.0}
+
+\newcommand{\bc}{\color{black}}
+
+%
+% ..............................................................................
+% Set colors for hypersetup
+% ------------------------------------------------------------------------------
+%
+\hypersetup{
+		breaklinks=true,
+		urlcolor=BaseColor,
+		citecolor=grape,
+		linkcolor=BaseColor}
+
+% Redefine Color of choice
+\definecolor{BaseColor}{RGB}{0,159,223}
+
+\colorlet{BaseColorA}{BaseColor!62.5}
+\colorlet{BaseColorB}{BaseColor!37.5}
+\colorlet{BaseColorC}{BaseColor!25.0}
+\colorlet{BaseColorD}{BaseColor!12.5}
+\colorlet{BaseColorConj}{BaseColor>wheel,1,2}
